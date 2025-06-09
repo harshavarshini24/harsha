@@ -1,0 +1,14 @@
+
+style{
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+
+}
+.obj{
+    display: flex;
+    justify-content: space-evenly;
+}
+li{
+    list-style: none;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form with Output</title>
+    <link rel="stylesheet" href="style.CSS">
+</head>
+<body>
+
+<h2>Contact Form</h2>
+
+<form id="contactForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" required><br><br>
+
+    <label for="Register Number">Register Number:</label><br>
+    <input type="Register Number" id="Register Number" required><br><br>
+<label for="Department">Department:</label><br>
+    <input type="Department" id="Department" required><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+<div id="output"></div>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+        e.preventDefault(); // Prevent page refresh
+
+        // Get values from input fields
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const RegisterNumber = document.getElementById("Register Number").value;
+        const Department = document.getElementById("Department").value;
+
+        // Display them below the form
+        const outputDiv = document.getElementById("output");
+        outputDiv.innerHTML = `
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Register Number:</strong> ${RegisterNumber}</p>
+            <p><strong>Department:</strong> ${Department}</p> 
+        `;
+    });
+    </script>
+<div class="style">
+    <ul class="obj">
+        <li>Home</li>
+        <li>About</li>
+        <li>Service</li>
+        <li>Contact</li>
+    </ul>
+</div>
+
+</body>
+</html>
